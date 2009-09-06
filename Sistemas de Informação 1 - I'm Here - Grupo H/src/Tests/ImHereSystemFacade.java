@@ -10,6 +10,7 @@ public class ImHereSystemFacade {
 
 	}
 
+	// Retorna o id
 	public String getUsuarioPorNome(String nome, String id) {
 		return null;
 	}
