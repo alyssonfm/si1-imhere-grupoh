@@ -1,15 +1,15 @@
 import java.util.List;
 
-public class User implements InterfaceUser{
+public class User implements UserIntarface{
 	private String userName;
 	private String name;
 	private String email;
 	private String senha;
 	private String telefone;
 	private String id;
-	private List <InterfaceUser> amigos;
+	private List <UserIntarface> amigos;
 	private Local localizacao;  //Entra a parte do GeoIp ou GPS...
-	private List <Mesage> mensagens;
+	private List <MesageInterface> mensagens;
 	
 	public User (String userName, String name, String email,
 			String senha, String telefone) {
@@ -54,28 +54,23 @@ public class User implements InterfaceUser{
 		return email;
 	}
 
-	//Precisa disso?
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public String getId() {
 		return this.id;
 	}
 	
-	public void addAmigo(InterfaceUser amigo){
+	public void addAmigo(UserIntarface amigo){
 		amigos.add(amigo);
 	}
 	
-	public void removeAmigo(InterfaceUser amigo){
+	public void removeAmigo(UserIntarface amigo){
 		amigos.remove(amigo);
 	}
 	
-	public void addMensagem (Mesage msg){
+	public void addMensagem (MesageInterface msg){
 		mensagens.add(msg);
 	}
 	
-	public void removeMensagem(Mesage msg){
+	public void removeMensagem(MesageInterface msg){
 		mensagens.remove(msg);
 	}
 }
