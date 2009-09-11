@@ -1,24 +1,27 @@
+package core;
+
 import java.util.List;
+
 
 public class User implements UserIntarface{
 	private String userName;
 	private String name;
 	private String email;
-	private String senha;
-	private String telefone;
+	private String password;
+	private String phone;
 	private String id;
 	private List <UserIntarface> amigos;
 	private Local localizacao;  //Entra a parte do GeoIp ou GPS...
 	private List <MesageInterface> mensagens;
 	
 	public User (String userName, String name, String email,
-			String senha, String telefone) {
+			String password, String phone) {
 		
 		this.userName = userName;
 		this.name = name;
 		this.email = email;
-		this.senha = senha;
-		this.telefone = telefone;
+		this.password = password;
+		this.phone = phone;
 		
 	}
 	
