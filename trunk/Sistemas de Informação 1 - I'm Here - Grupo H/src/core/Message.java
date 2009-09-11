@@ -3,13 +3,13 @@ import java.util.List;
 
 
 
-public class Mesage implements MesageInterface{
+public class Message implements MessageInterface{
 	private String sender;
 	private List <String> receiver;
 	private String title;
 	private String mesage;
 	
-	public Mesage(String sender, String receiver, String mesage, String title) {
+	public Message(String sender, String receiver, String mesage, String title) {
 		this.sender = sender;
 		this.addReceiver(receiver);
 		this.mesage = mesage;
