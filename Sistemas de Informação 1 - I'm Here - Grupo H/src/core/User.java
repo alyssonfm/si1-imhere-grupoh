@@ -10,9 +10,9 @@ public class User implements UserIntarface{
 	private String password;
 	private String phone;
 	private String id;
-	private List <UserIntarface> amigos;
-	private Local localizacao;  //Entra a parte do GeoIp ou GPS...
-	private List <MesageInterface> mensagens;
+	private List <UserIntarface> friends;
+	private Position position;  //Entra a parte do GeoIp ou GPS...
+	private List <MessageInterface> messages;
 	
 	public User (String userName, String name, String email,
 			String password, String phone) {
@@ -32,21 +32,29 @@ public class User implements UserIntarface{
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public Position getPosition(){
+		return position;
+	}
+	
+	public void setPosition(Position position){
+		this.position = position;
+	}
 
 	public String getSenha() {
-		return senha;
+		return password;
 	}
 
 	public void setSenha(String senha) {
-		this.senha = senha;
+		this.password = senha;
 	}
 
 	public String getTelefone() {
-		return telefone;
+		return phone;
 	}
 
 	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+		this.phone = telefone;
 	}
 
 	public String getUserName() {
@@ -62,18 +70,18 @@ public class User implements UserIntarface{
 	}
 	
 	public void addAmigo(UserIntarface amigo){
-		amigos.add(amigo);
+		friends.add(amigo);
 	}
 	
 	public void removeAmigo(UserIntarface amigo){
-		amigos.remove(amigo);
+		friends.remove(amigo);
 	}
 	
-	public void addMensagem (MesageInterface msg){
-		mensagens.add(msg);
+	public void addMensagem (MessageInterface msg){
+		messages.add(msg);
 	}
 	
-	public void removeMensagem(MesageInterface msg){
-		mensagens.remove(msg);
+	public void removeMensagem(MessageInterface msg){
+		messages.remove(msg);
 	}
 }
