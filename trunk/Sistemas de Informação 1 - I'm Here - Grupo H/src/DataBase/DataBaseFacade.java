@@ -1,16 +1,16 @@
 package DataBase;
 
-import core.UserIntarface;
+import core.UserInterface;
 import core.Position;
 import core.MessageInterface;
 
 import java.util.List;
 
-public class DataBaseFacade {
+public class DataBaseFacade implements DataBaseInterface{
 	
 	//Save one user in the Data Base (DB)
 	public void saveUser(String userName, String name, String email,
-			String phone, String id, List <UserIntarface> friends,
+			String phone, String id, List <UserInterface> friends,
 			Position localizacao, List<MessageInterface> messages){
 		
 	}
