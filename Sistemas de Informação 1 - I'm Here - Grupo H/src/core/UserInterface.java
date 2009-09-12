@@ -1,6 +1,6 @@
 package core;
 
-public interface UserIntarface {
+public interface UserInterface {
 	
 	public String getSenha();
 	

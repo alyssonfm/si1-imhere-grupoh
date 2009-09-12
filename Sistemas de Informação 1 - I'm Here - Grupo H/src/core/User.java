@@ -3,14 +3,14 @@ package core;
 import java.util.List;
 
 
-public class User implements UserIntarface{
+public class User implements UserInterface{
 	private String userName;
 	private String name;
 	private String email;
 	private String password;
 	private String phone;
 	private String id;
-	private List <UserIntarface> friends;
+	private List <UserInterface> friends;
 	private Position position;  //Entra a parte do GeoIp ou GPS...
 	private List <MessageInterface> messages;
 	
@@ -69,11 +69,11 @@ public class User implements UserIntarface{
 		return this.id;
 	}
 	
-	public void addAmigo(UserIntarface amigo){
+	public void addAmigo(UserInterface amigo){
 		friends.add(amigo);
 	}
 	
-	public void removeAmigo(UserIntarface amigo){
+	public void removeAmigo(UserInterface amigo){
 		friends.remove(amigo);
 	}
 	
